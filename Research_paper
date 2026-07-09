@@ -1,0 +1,193 @@
+# Customer Segmentation & Churn Pattern Analytics in European Banking
+
+## Abstract
+
+This research analyzes customer churn patterns in European banking using segmentation analytics. Leveraging a dataset of 10,000+ customers from France, Spain, and Germany, we identify key churn drivers and develop actionable insights for retention strategies. The analysis reveals significant variations in churn behavior across geography, age groups, and financial profiles, with inactive members and customers aged 46-60 showing the highest churn rates.
+
+## 1. Introduction
+
+### 1.1 Background
+Customer churn represents one of the largest hidden costs in retail banking. Losing existing customers leads to reduced lifetime value and increased acquisition costs. While banks often track churn rates, they lack granular segmentation insights to develop targeted retention strategies.
+
+### 1.2 Problem Statement
+Despite having rich customer-level data, banks face challenges in:
+- Identifying high-risk customer segments
+- Understanding churn differences by geography and demographics
+- Quantifying the financial profile of churned customers
+
+### 1.3 Objectives
+- Measure overall churn rate
+- Identify churn distribution across customer segments
+- Compare churn behavior across European regions
+- Understand churn among high-value customers
+- Evaluate engagement and tenure patterns
+
+## 2. Methodology
+
+### 2.1 Dataset Description
+The dataset contains 10,000+ customer records with the following attributes:
+- CustomerId: Unique identifier
+- CreditScore: Customer creditworthiness
+- Geography: France, Spain, Germany
+- Gender: Male/Female
+- Age: Customer age
+- Tenure: Years with the bank
+- Balance: Account balance
+- NumOfProducts: Number of bank products
+- HasCrCard: Credit card ownership
+- IsActiveMember: Activity indicator
+- EstimatedSalary: Annual salary
+- Exited: Churn indicator (target variable)
+
+### 2.2 Segmentation Design
+Customers were segmented across multiple dimensions:
+- **Geographic**: France, Spain, Germany
+- **Age**: <30, 30-45, 46-60, 60+
+- **Credit Score**: Low (<580), Medium (580-670), High (670+)
+- **Tenure**: New (<3 years), Mid-term (3-7 years), Long-term (7+ years)
+- **Balance**: Zero, Low (<€50,000), Medium (€50,000-€150,000), High (€150,000+)
+
+### 2.3 Analytical Approach
+1. Data cleaning and validation
+2. Exploratory data analysis
+3. Segment-wise churn calculation
+4. Comparative analysis
+5. High-value customer analysis
+
+## 3. Results
+
+### 3.1 Overall Churn Rate
+The overall churn rate was **20.37%**, indicating that approximately 1 in 5 customers exited the bank.
+
+### 3.2 Churn by Geography
+| Geography | Customers | Churn Rate |
+|-----------|-----------|------------|
+| Germany   | 2,508     | 32.4%      |
+| France    | 5,014     | 16.2%      |
+| Spain     | 2,478     | 16.7%      |
+
+**Key Insight**: Germany has nearly double the churn rate of France and Spain, suggesting unique market challenges or competitive pressures.
+
+### 3.3 Churn by Age Group
+| Age Group | Churn Rate |
+|-----------|------------|
+| 46-60     | 26.8%      |
+| 30-45     | 20.6%      |
+| 60+       | 19.3%      |
+| <30       | 10.2%      |
+
+**Key Insight**: Middle-aged customers (46-60) are most likely to churn, while younger customers (<30) show the lowest churn rate.
+
+### 3.4 Churn by Balance Group
+| Balance Group | Churn Rate |
+|---------------|------------|
+| High          | 24.7%      |
+| Medium        | 23.1%      |
+| Zero          | 21.0%      |
+| Low           | 14.3%      |
+
+**Key Insight**: High-balance customers surprisingly show higher churn rates, indicating potential targeting by competitors.
+
+### 3.5 Churn by Activity Status
+| Status   | Churn Rate |
+|----------|------------|
+| Inactive | 26.8%      |
+| Active   | 14.3%      |
+
+**Key Insight**: Inactive members are 87% more likely to churn, highlighting the importance of engagement programs.
+
+### 3.6 Churn by Tenure
+| Tenure Group | Churn Rate |
+|--------------|------------|
+| New          | 24.5%      |
+| Long-term    | 21.8%      |
+| Mid-term     | 17.8%      |
+
+**Key Insight**: New customers are most vulnerable to churn, suggesting onboarding improvements are needed.
+
+### 3.7 High-Value Customer Churn
+High-value customers (top 10% by balance) had a churn rate of **17.4%**, lower than the overall average, but still representing significant revenue loss.
+
+## 4. Key Findings
+
+1. **Geography matters**: Germany (32.4%) has significantly higher churn than France (16.2%) and Spain (16.7%).
+
+2. **Age is a strong predictor**: Customers aged 46-60 (26.8%) are most likely to churn.
+
+3. **Inactivity is a red flag**: Inactive members (26.8%) churn at nearly double the rate of active members (14.3%).
+
+4. **High-value customers aren't safe**: High-balance customers show 24.7% churn rate.
+
+5. **New customers need attention**: New customers (24.5%) churn at higher rates.
+
+6. **Credit score matters**: Low credit score customers (24.8%) churn at significantly higher rates.
+
+## 5. Recommendations
+
+### 5.1 Retention Strategies by Segment
+
+**For German Market**:
+- Investigate competitive pressures
+- Enhance loyalty programs
+- Conduct market research
+
+**For Customers Aged 46-60**:
+- Premium loyalty programs
+- Retirement planning services
+- Personalized communication
+
+**For Inactive Members**:
+- Re-engagement campaigns
+- Exclusive offers
+- Digital engagement initiatives
+
+**For New Customers**:
+- Improved onboarding
+- Welcome incentives
+- Early engagement programs
+
+**For High-Value Customers**:
+- Dedicated relationship managers
+- Premium service offerings
+- Proactive retention strategies
+
+### 5.2 Strategic Recommendations
+
+1. **Implement early warning system** using engagement metrics
+2. **Develop geography-specific strategies** with focus on German market
+3. **Create customer engagement programs** for inactive members
+4. **Design age-segmented retention campaigns**
+5. **Establish high-value customer retention programs**
+
+## 6. Dashboard Development
+
+An interactive Streamlit dashboard was developed to enable real-time churn analytics:
+
+### Key Features
+- **KPI Overview**: Total customers, churned customers, churn rate, high-value churn
+- **Segment Analysis**: Churn rates by geography, age, balance, credit score, tenure, activity
+- **Interactive Filters**: Geography and age group filters
+- **High-Value Analysis**: Dedicated section for premium customer churn
+
+### Deployment
+The dashboard is deployed on Streamlit Cloud and provides stakeholders with accessible, real-time insights.
+
+## 7. Conclusion
+
+This project demonstrates that systematic segmentation-driven analytics can uncover actionable churn insights. The analysis identified Germany, customers aged 46-60, and inactive members as high-risk segments requiring targeted interventions. The interactive dashboard enables ongoing monitoring and rapid response to churn trends, empowering banks to move from reactive to proactive retention strategies.
+
+## 8. References
+
+- Dataset: European Bank Customer Data (2025)
+- Tools: Python, Pandas, Plotly, Streamlit
+
+## Appendix
+
+### Appendix A: Correlation Matrix
+[Include correlation matrix image]
+
+### Appendix B: Distribution Visualizations
+[Include key visualizations]
+
+### Appendix C: Dashboard Screenshots
+[Include dashboard images]
